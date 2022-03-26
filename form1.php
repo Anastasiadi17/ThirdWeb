@@ -69,7 +69,7 @@ $pass = '2542084';
 $db = new PDO('mysql:host=localhost;dbname=u47562', $user, $pass, array(PDO::ATTR_PERSISTENT => true));
 
 try {
-  $stmt = $db->prepare("INSERT INTO application SET field1 = ?, field2 = ?, field3 = ?, r1 = ?, r2 = ?, field5 = ?, check1 = ?");
+  $stmt = $db->prepare("INSERT INTO Table1 SET field1 = ?, field2 = ?, field3 = ?, r1 = ?, r2 = ?, field5 = ?, check1 = ?");
   $stmt -> execute(array(
 		$_POST['field1'],
         $_POST['field2'],
@@ -80,7 +80,7 @@ try {
 		$_POST[true],
 	));
 	
-  $stmt = $db->prepare("INSERT INTO Superpowers SET field1 = ?");
+  $stmt = $db->prepare("INSERT INTO Table2 SET field1 = ?");
   $stmt -> execute(array(
 		$_POST['field4'] = implode(', ', $_POST['field4']),
 	));
