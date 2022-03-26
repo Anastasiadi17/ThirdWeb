@@ -64,9 +64,9 @@ if ($errors) {
   exit();
 }
 
-$user = 'u47569';
-$pass = '3312824';
-$db = new PDO('mysql:host=localhost;dbname=u47569', $user, $pass, array(PDO::ATTR_PERSISTENT => true));
+$user = 'u47562';
+$pass = '2542084';
+$db = new PDO('mysql:host=localhost;dbname=u475692', $user, $pass, array(PDO::ATTR_PERSISTENT => true));
 
 try {
   $stmt = $db->prepare("INSERT INTO application SET name = ?, email = ?, year = ?, gender = ?, kon = ?, bio = ?, contr_check = ?");
