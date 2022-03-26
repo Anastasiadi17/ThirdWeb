@@ -14,48 +14,48 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
 }
 
 $errors = FALSE;
-if (empty($_POST['name'])) {
+if (empty($_POST['field1'])) {
   print('Заполните имя.<br/>');
   $errors = TRUE;
 }
 
-if (empty($_POST['email']) or !(strpos($_POST['email'], '@'))) {
+if (empty($_POST['field2']) or !(strpos($_POST['field2'], '@'))) {
   print('Введите e-mail.<br/>');
   $errors = TRUE;
 }
 
-if (empty($_POST['year'])) {
+if (empty($_POST['field3'])) {
   print('Выберите год рождения.<br/>');
   $errors = TRUE;
 }
 
-if (empty($_POST['gender'])) {
+if (empty($_POST['r1'])) {
   print('Укажите ваш пол.<br/>');
   $errors = TRUE;
 }
 
 
-if (empty($_POST['kon'])){
+if (empty($_POST['r2'])){
     print ('Выберите количество конечностей.<br>');
     $errors = true;
 
 }
 
-if (empty($_POST['super'])){
+if (empty($_POST['field4'])){
     print ('Выберите одну или несколько сверхспособностей.<br>');
     $errors = true;
 
 }
 else {
-  $super = serialize($_POST['super']);
+  $field4 = serialize($_POST['field4']);
 }
 
-if (empty($_POST['bio'])){
+if (empty($_POST['field5'])){
     print ('Расскажите о себе.<br>');
     $errors = true;
 }
 
-if (empty($_POST['contr_check'])){
+if (empty($_POST['check1'])){
     print ('Вы не можете отправить форму, не ознакомившись с контрактом.<br>');
     $errors = true;
 }
@@ -66,23 +66,23 @@ if ($errors) {
 
 $user = 'u47562';
 $pass = '2542084';
-$db = new PDO('mysql:host=localhost;dbname=u475692', $user, $pass, array(PDO::ATTR_PERSISTENT => true));
+$db = new PDO('mysql:host=localhost;dbname=u47562', $user, $pass, array(PDO::ATTR_PERSISTENT => true));
 
 try {
-  $stmt = $db->prepare("INSERT INTO application SET name = ?, email = ?, year = ?, gender = ?, kon = ?, bio = ?, contr_check = ?");
+  $stmt = $db->prepare("INSERT INTO application SET field1 = ?, field2 = ?, field3 = ?, r1 = ?, r2 = ?, field5 = ?, check1 = ?");
   $stmt -> execute(array(
-		$_POST['name'],
-        $_POST['email'],
-        $_POST['year'],
-        $_POST['gender'],
-        $_POST['kon'],
-        $_POST['bio'],
+		$_POST['field1'],
+        $_POST['field2'],
+        $_POST['field3'],
+        $_POST['r1'],
+        $_POST['r2'],
+        $_POST['field5'],
 		$_POST[true],
 	));
 	
-  $stmt = $db->prepare("INSERT INTO Superpowers SET name = ?");
+  $stmt = $db->prepare("INSERT INTO Superpowers SET field1 = ?");
   $stmt -> execute(array(
-		$_POST['super'] = implode(', ', $_POST['super']),
+		$_POST['field4'] = implode(', ', $_POST['field4']),
 	));
 }
 catch(PDOException $e){
