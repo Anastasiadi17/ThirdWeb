@@ -34,10 +34,10 @@
       <label><input type="radio" checked="checked" name="r1" value="1" />мужской</label>
       <label><input type="radio" name="r1" value="2" />женский</label><br />
 	  <b>Количество конечностей:</b><br />
-      <label><input type="radio" name="r2" value="1" />2 ноги, 2 руки</label>
-	  <label><input type="radio" name="r2" value="2" />2 ноги, 1 рука</label>
-	  <label><input type="radio" name="r2" value="3" />1 нога,  2 руки</label>
-      <label><input type="radio" checked="checked" name="r2" value="4" />1 рука, 1 нога</label><br />	
+      <label><input type="radio" name="r2" value="1" />1</label>
+	  <label><input type="radio" name="r2" value="2" />2</label>
+	  <label><input type="radio" name="r2" value="3" />3</label>
+      <label><input type="radio" checked="checked" name="r2" value="4" />4</label><br />	
 	  <b>Сверхспособности:</b><br />
         <label><select name="field4"
           multiple="multiple">
