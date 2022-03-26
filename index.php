@@ -52,7 +52,7 @@
         <textarea name="field5">Напишите о себе</textarea>
       </label><br />
       <label><input type="checkbox" name="check1" /> <b>С контрактом ознакомлен (а)</b> </label><br />
-      <input type="submit" value="Отправить" />
+      <p><button type="submit" value="send">Отправить</p>
     </form>
   
   </body>
