@@ -37,12 +37,12 @@
 	  <label><input type="radio" name="r2" value="3" />3</label>
       <label><input type="radio" checked="checked" name="r2" value="4" />4</label><br />	
 	  <b>Сверхспособности:</b><br />
-        <label><select name="field4"
+        <label><select name="field4[]"
           multiple="multiple">
-          <option value="1">Бессмертие</option>
-          <option value="2" selected="selected">Прохождение скозь стены</option>
-		  <option value="3">Левитация</option>
-          <option value="4">Чтение мыслей</option>
+          <option value="bessmertie">Бессмертие</option>
+          <option value="Steny" selected="selected">Прохождение скозь стены</option>
+		  <option value="Levitation">Левитация</option>
+          <option value="Mysli">Чтение мыслей</option>
         </select>
       </label><br />
 	  <label>
