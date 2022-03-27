@@ -7,12 +7,10 @@
     <title>Моя страница</title>
     <link rel="stylesheet" href="style.css" />
   </head>
-
   <body>
    <div id="form">
     	<h1><b>Форма</b></h1>
-	<form action="/"
-      method="POST">
+	<form action="form1.php" method="POST">
       <label>
         <b>Введите имя:</b><br />
         <input  type="text" name="field1"
@@ -56,5 +54,4 @@
     </form>
   
   </body>
-
 </html>
