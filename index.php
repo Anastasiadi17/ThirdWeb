@@ -13,31 +13,31 @@
 	<form action="form1.php" method="POST">
       <label>
         <b>Введите имя:</b><br />
-        <input  type="text" name="field1"
+        <input  type="text" name="name"
           value="Jack" />
       </label><br />
       <label>
         <b>Введите свой email:</b><br />
-        <input type="text" name="field2"
+        <input type="text" name="email"
           value="example@mail.ru"
           type="email" />
       </label><br />
       <label>
         <b>Дата рождения:</b><br />
-        <input type="date" name="field3"
+        <input type="date" name="date"
           value="2002-03-22"
           type="date" />
       </label><br />
       <b>Пол:</b><br />
-      <label><input type="radio" checked="checked" name="r1" value="male" />мужской</label>
-      <label><input type="radio" name="r1" value="female" />женский</label><br />
+      <label><input type="radio" checked="checked" name="pol" value="male" />мужской</label>
+      <label><input type="radio" name="pol" value="female" />женский</label><br />
 	  <b>Количество конечностей:</b><br />
-      <label><input type="radio" name="r2" value="1" />1</label>
-	  <label><input type="radio" name="r2" value="2" />2</label>
-	  <label><input type="radio" name="r2" value="3" />3</label>
-      <label><input type="radio" checked="checked" name="r2" value="4" />4</label><br />	
+      <label><input type="radio" name="konechn" value="1" />1</label>
+	  <label><input type="radio" name="konechn" value="2" />2</label>
+	  <label><input type="radio" name="konechn" value="3" />3</label>
+      <label><input type="radio" checked="checked" name="konechn" value="4" />4</label><br />	
 	  <b>Сверхспособности:</b><br />
-        <label><select name="field4[]"
+        <label><select name="super[]"
           multiple="multiple">
           <option value="bessmertie">Бессмертие</option>
           <option value="Steny" selected="selected">Прохождение скозь стены</option>
@@ -47,7 +47,7 @@
       </label><br />
 	  <label>
         <b>Биография:</b><br />
-        <textarea name="field5">Напишите о себе</textarea>
+        <textarea name="info">Напишите о себе</textarea>
       </label><br />
       <label><input type="checkbox" value="check1" name="check1" /> <b>С контрактом ознакомлен (а)</b> </label><br />
       <p><button type="submit" value="send">Отправить</p>

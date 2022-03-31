@@ -14,43 +14,43 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
 }
 
 $errors = FALSE;
-if (empty($_POST['field1'])) {
+if (empty($_POST['name'])) {
   print('Заполните имя.<br/>');
   $errors = TRUE;
 }
 
-if (empty($_POST['field2']) or !(strpos($_POST['field2'], '@'))) {
+if (empty($_POST['email']) or !(strpos($_POST['email'], '@'))) {
   print('Введите e-mail.<br/>');
   $errors = TRUE;
 }
 
-if (empty($_POST['field3'])) {
+if (empty($_POST['date'])) {
   print('Выберите год рождения.<br/>');
   $errors = TRUE;
 }
 
-if (empty($_POST['r1'])) {
+if (empty($_POST['pol'])) {
   print('Укажите ваш пол.<br/>');
   $errors = TRUE;
 }
 
 
-if (empty($_POST['r2'])){
+if (empty($_POST['konechn'])){
     print ('Выберите количество конечностей.<br>');
     $errors = true;
 
 }
 
-if (empty($_POST['field4'])){
+if (empty($_POST['super'])){
     print ('Выберите одну или несколько сверхспособностей.<br>');
     $errors = true;
 
 }
 else {
-  $field4 = serialize($_POST['field4']);
+  $field4 = serialize($_POST['super']);
 }
 
-if (empty($_POST['field5'])){
+if (empty($_POST['info'])){
     print ('Расскажите о себе.<br>');
     $errors = true;
 }
@@ -69,20 +69,20 @@ $pass = '2542084';
 $db = new PDO('mysql:host=localhost;dbname=u47562', $user, $pass, array(PDO::ATTR_PERSISTENT => true));
 
 try {
-  $stmt = $db->prepare("INSERT INTO application SET field1 = ?, field2 = ?, field3 = ?, r1 = ?, r2 = ?, field5 = ?, check1 = ?");
+  $stmt = $db->prepare("INSERT INTO application SET name = ?, email = ?, date = ?, pol = ?, konechn = ?, info = ?, check1 = ?");
   $stmt -> execute(array(
-		$_POST['field1'],
-        $_POST['field2'],
-        $_POST['field3'],
-        $_POST['r1'],
-        $_POST['r2'],
-        $_POST['field5'],
+		$_POST['name'],
+        $_POST['email'],
+        $_POST['date'],
+        $_POST['pol'],
+        $_POST['konechn'],
+        $_POST['info'],
 		$_POST[true],
 	));
 	
-  $stmt = $db->prepare("INSERT INTO Superpowers SET field1 = ?");
+  $stmt = $db->prepare("INSERT INTO Superpowers SET name = ?");
   $stmt -> execute(array(
-		$_POST['field4'] = implode(', ', $_POST['field4']),
+		$_POST['super'] = implode(', ', $_POST['super']),
 	));
 }
 catch(PDOException $e){
