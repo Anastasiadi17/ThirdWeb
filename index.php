@@ -29,8 +29,8 @@
           type="date" />
       </label><br />
       <b>Пол:</b><br />
-      <label><input type="radio" checked="checked" name="r1" value="1" />мужской</label>
-      <label><input type="radio" name="r1" value="2" />женский</label><br />
+      <label><input type="radio" checked="checked" name="r1" value="male" />мужской</label>
+      <label><input type="radio" name="r1" value="female" />женский</label><br />
 	  <b>Количество конечностей:</b><br />
       <label><input type="radio" name="r2" value="1" />1</label>
 	  <label><input type="radio" name="r2" value="2" />2</label>
@@ -49,7 +49,7 @@
         <b>Биография:</b><br />
         <textarea name="field5">Напишите о себе</textarea>
       </label><br />
-      <label><input type="checkbox" name="check1" /> <b>С контрактом ознакомлен (а)</b> </label><br />
+      <label><input type="checkbox" value="check1" name="check1" /> <b>С контрактом ознакомлен (а)</b> </label><br />
       <p><button type="submit" value="send">Отправить</p>
     </form>
   
