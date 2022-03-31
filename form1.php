@@ -80,7 +80,8 @@ try {
 		$_POST[true],
 	));
 	
-  $stmt = $db->prepare("INSERT INTO Superpowers SET name = ?, sup_id = ?");
+  $stmt = $db->prepare("INSERT INTO Superpowers SET name = ?, sup_id =: per");
+  $sppe->bindParam(':per', $id);
   $stmt -> execute(array(
 		$_POST['super'] = implode(', ', $_POST['super']),
 	));
