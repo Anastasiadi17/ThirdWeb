@@ -8,7 +8,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
     print('Спасибо, результаты сохранены.');
   }
 
-  include('index.php');
+  include('index.html');
 
   exit();
 }
