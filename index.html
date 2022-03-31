@@ -10,7 +10,7 @@
   <body>
    <div id="form">
     	<h1><b>Форма</b></h1>
-	<form action="form1.php" method="POST">
+	<form action="form2.php" method="POST">
       <label>
         <b>Введите имя:</b><br />
         <input  type="text" name="name"
